@@ -15,16 +15,16 @@ const (
 
 func WalkingSpentCalories(steps int, weight, height float64, duration time.Duration) (float64, error) {
 	if steps <= 0 {
-		return 0, fmt.Errorf("ошибка: некорректное количество шагов (%d)", steps)
+		return 0, fmt.Errorf("некорректное количество шагов (%d)", steps)
 	}
 	if weight <= 0 {
-		return 0, fmt.Errorf("ошибка: некорректное значение веса (%.2f)", weight)
+		return 0, fmt.Errorf("некорректное значение веса (%.2f)", weight)
 	}
 	if height <= 0 {
-		return 0, fmt.Errorf("ошибка: некорректное значение роста (%.2f)", height)
+		return 0, fmt.Errorf("некорректное значение роста (%.2f)", height)
 	}
 	if duration <= 0 {
-		return 0, fmt.Errorf("ошибка: некорректное значение длительности (%v)", duration)
+		return 0, fmt.Errorf("некорректное значение длительности (%v)", duration)
 	}
 	speed := MeanSpeed(steps, height, duration)
 	durationMin := duration.Minutes()
@@ -33,16 +33,16 @@ func WalkingSpentCalories(steps int, weight, height float64, duration time.Durat
 
 func RunningSpentCalories(steps int, weight, height float64, duration time.Duration) (float64, error) {
 	if steps <= 0 {
-		return 0, fmt.Errorf("ошибка: некорректное количество шагов (%d)", steps)
+		return 0, fmt.Errorf("некорректное количество шагов (%d)", steps)
 	}
 	if weight <= 0 {
-		return 0, fmt.Errorf("ошибка: некорректное значение веса (%.2f)", weight)
+		return 0, fmt.Errorf("некорректное значение веса (%.2f)", weight)
 	}
 	if height <= 0 {
-		return 0, fmt.Errorf("ошибка: некорректное значение роста (%.2f)", height)
+		return 0, fmt.Errorf("некорректное значение роста (%.2f)", height)
 	}
 	if duration <= 0 {
-		return 0, fmt.Errorf("ошибка: некорректное значение длительности (%v)", duration)
+		return 0, fmt.Errorf("некорректное значение длительности (%v)", duration)
 	}
 	speed := MeanSpeed(steps, height, duration)
 	durationMin := duration.Minutes()
